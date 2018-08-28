@@ -11,8 +11,15 @@ if ($_GET) {
 ?>
 
 <form action="addCategory.php" method="get">
-    <label for="category">Categoria:</label>
-    <input type="text" name="category">
+    <label for="category">Nome da categoria:</label>
+    <br>
+    <input type="text" name="category" required>
 
-    <button type="submit">Adicionar</button>
+    <div style="margin-top: 15px">
+        <button type="submit" style="background: blue; color: white; padding: 10px 20px; text-decoration: none;
+            border: 0; font-size: 16px">Adicionar</button>
+        <a href="index.php" style="background: blue; color: white; padding: 12px 20px; text-decoration: none;
+            font-size: 16px;">Voltar</a>
+    </div>
+    
 </form>

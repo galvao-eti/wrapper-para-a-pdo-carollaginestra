@@ -55,6 +55,7 @@
             table {
                 border: 1px solid #333;
                 padding: 15px;
+                width: 100%;
             }
 
             td {
