@@ -1,14 +1,3 @@
-
-<?php
-    require '../autoload.php';
-
-    use Alfa\Wrapper;
-
-    $wrapper = new Wrapper();
-
-    $listCategory = $wrapper->listCategory();
-
-?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -72,21 +61,31 @@
                 <a href="addCategory.php">Nova Categoria <i class="fas fa-plus"></i></a>
             </div>
         
-            <br>
+            <br><br>
             <table>
                 <tr>
                     <th style="width: 32%">ID</th>
                     <th style="width: 32%">Categoria</th>
                     <th style="width: 32%">Ações</th>
                 </tr>
-                <?php foreach ($listCategory as $category) { ?>
+                <?php
+                    require '../autoload.php';
+
+                    use Alfa\Wrapper;
+
+                    $wrapper = new Wrapper();
+
+                    $category = $wrapper->listCategory();
+
+                    foreach ($category as $c) { ?>
+                    
                     <tr>
-                        <td><?php echo $category['id'] ?></td>
-                        <td><?php echo $category['nome'] ?></td>
-                        <td><a href="editCategory.php?edit=<?php echo $category['id'] ?>">Editar</a></td>
-                        <td><a href="deleteCategory.php?delete=<?php echo $category['id'] ?>">Deletar</a></td>
+                        <td><?php echo $c['id'] ?></td>
+                        <td><?php echo $c['nome'] ?></td>
+                        <td><a href="editCategory.php?edit=<?php echo $c['id'] ?>">Editar</a></td>
+                        <td><a href="deleteCategory.php?delete=<?php echo $c['id'] ?>">Deletar</a></td>
                     </tr>
-                <?php } ?>
+                <?php }?>
             </table>
         </div>
 
