@@ -6,10 +6,6 @@
 
     $wrapper = new Wrapper();
 
-    if (isset($_GET['delete'])) {
-        $wrapper->deleteCategory($_GET['delete']);
-    }
-
     $listCategory = $wrapper->listCategory();
 
 ?>
@@ -82,12 +78,12 @@
                     <th style="width: 32%">Categoria</th>
                     <th style="width: 32%">Ações</th>
                 </tr>
-                <?php foreach ($listCategory as $cat) { ?>
+                <?php foreach ($listCategory as $category) { ?>
                     <tr>
-                        <td><?php echo $cat['id'] ?></td>
-                        <td><?php echo $cat['nome'] ?></td>
-                        <td><a href="editCategory.php?edit=<?php echo $cat['id'] ?>">Editar</a></td>
-                        <td><a href="index.php?delete=<?php echo $cat['id'] ?>">Deletar</a></td>
+                        <td><?php echo $category['id'] ?></td>
+                        <td><?php echo $category['nome'] ?></td>
+                        <td><a href="editCategory.php?edit=<?php echo $category['id'] ?>">Editar</a></td>
+                        <td><a href="deleteCategory.php?delete=<?php echo $category['id'] ?>">Deletar</a></td>
                     </tr>
                 <?php } ?>
             </table>
