@@ -12,8 +12,6 @@
 
     $listCategory = $wrapper->listCategory();
 
-    
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -69,15 +67,15 @@
         <div class="container">
 
             <div class="margin-top">
-                <a href="addCategory.php">Adicionar Categoria</a>
+                <a href="addCategory.php">Nova Categoria <i class="fas fa-plus"></i></a>
             </div>
         
             <br>
             <table>
                 <tr>
-                    <th>ID</th>
-                    <th>Nome</th>
-                    <th style="width:30%">Ações</th>
+                    <th style="width: 32%">ID</th>
+                    <th style="width: 32%">Categoria</th>
+                    <th style="width: 32%">Ações</th>
                 </tr>
                 <?php foreach ($listCategory as $cat) { ?>
                     <tr>
