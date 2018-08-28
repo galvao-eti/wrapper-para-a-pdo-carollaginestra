@@ -5,7 +5,7 @@ class Config {
 	
 	public $type, $host, $port, $base, $user, $pass, $dsn;
 	
-	public function __construct($type, $host, $port, $base, $user, $pass) {
+	public function __construct($type, $host, $port, $base, $user, $pass, $dsn) {
 		$this->type = $type;
 		$this->host = $host;
 		$this->port = $port;
