@@ -58,6 +58,11 @@
 
             table {
                 border: 1px solid #333;
+                padding: 15px;
+            }
+
+            td {
+                padding: 15px 0;
             }
         </style>
     </head>

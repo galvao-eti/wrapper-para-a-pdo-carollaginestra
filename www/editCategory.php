@@ -5,11 +5,6 @@ use Alfa\Wrapper;
 
 $Category = new Wrapper();
 
-<?php
-require "../autoload.php";
-
-use Alfa\Wrapper;
-$Category = new Wrapper();
 if (isset($_GET['edit'])) {
 		$value = $Category->searchCategory($_GET['edit']);
 } else {
@@ -25,4 +20,3 @@ if (isset($_GET['edit'])) {
 
     <button type="submit">Salvar</button>
 </form>
-
